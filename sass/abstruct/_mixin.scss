@@ -1,0 +1,45 @@
+/* 0 - 600 phnne
+600-900 tab portrate
+900-1200 tab landscape
+1200 is our lap */
+
+// @mixin respond($breakpoint) {
+//     if($breakpoint == phone){
+//         @media (max-width: 600px) {content;}
+//     }
+// }
+
+@mixin beforeTags($tag) {
+  &::before {
+    content: $tag;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: black;
+    font-family: "Nanum Pen Script", cursive;
+    text-transform: lowercase;
+    opacity: 80%;
+    text-decoration: none !important;
+  }
+}
+
+@mixin afterTags($tag) {
+  &::after {
+    content: $tag;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: black;
+    font-family: "Nanum Pen Script", cursive;
+    text-transform: lowercase;
+    opacity: 80%;
+    z-index: 1;
+    text-decoration: none !important;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

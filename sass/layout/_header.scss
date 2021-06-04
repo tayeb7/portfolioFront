@@ -1,0 +1,36 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      $color-primarry,
+      $color-secondary
+    ),
+    url(../images/header.jpeg);
+  background-size: cover;
+  background-position: bottom left;
+  border-radius: 8px;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+
+    &--chart {
+      height: 35px;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f76927a6;
+    border-radius: 10px;
+    padding: 5px 20px;
+  }
+}

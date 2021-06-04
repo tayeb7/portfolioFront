@@ -1,0 +1,21 @@
+.section-about {
+  background-color: $color-gray-light-1;
+  margin-top: -20vh;
+  padding: 18rem 0;
+}
+
+.section-skills {
+  height: 40vh;
+  margin: -18rem 0 10rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      $color-primarry,
+      $color-secondary
+    ),
+    url(../images/skills.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20rem;
+
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}

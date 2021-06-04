@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  // height: 0rem;
+
+  &_sides {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    background-color: rgba(219, 217, 217, 0.425);
+    color: white;
+    font-size: 2rem;
+    height: 30rem;
+    top: 0;
+    left: 0;
+
+    box-shadow: inset 3px 3px 2rem #838181;
+    border-radius: 5px;
+
+    &_front {
+      background-color: #009196;
+
+      border-radius: 5px;
+      position: absolute;
+      transition: all 1.2s;
+      width: 100%;
+      height: 100%;
+    }
+    &_back {
+      background-color: rgb(168, 144, 7);
+      transform: rotateY(180deg);
+      // z-index: -5;
+
+      border-radius: 5px;
+      position: absolute;
+      transition: all 1.2s;
+      backface-visibility: hidden; ///hides the back part of an element
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover &_sides_front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &_sides_back {
+    transform: rotateY(0deg);
+  }
+}
+
+.front--heading {
+  // position: relative;
+  &__img {
+    // position: absolute;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    // z-index: 0;
+  }
+  &__text {
+    // position: absolute;
+  }
+}

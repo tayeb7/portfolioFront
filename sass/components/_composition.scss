@@ -1,0 +1,34 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 50%;
+    position: relative;
+    box-shadow: 0 1.5rem 2rem rgba(black, 0.6);
+    position: absolute;
+    transition: all 0.3s;
+    outline-offset: 8px;
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+    &--p2 {
+      right: 5rem;
+      top: 2rem;
+    }
+    &--p3 {
+      left: 4%;
+      top: 8rem;
+    }
+    &:hover {
+      outline: 1rem $dark-orange solid;
+      z-index: 1;
+      transform: scale(1.2);
+    }
+  }
+  //select the photos that are not hovered
+  transition: all 0.2s;
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.8);
+  }
+}

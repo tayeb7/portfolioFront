@@ -1,0 +1,28 @@
+.skill-box {
+  border-radius: 3px;
+  text-align: center;
+  padding: 2.5rem;
+  // border: gray solid 3px;
+  margin: 4rem 0;
+  box-shadow: -1rem 1rem 3rem gray;
+  transition: transform 0.2s;
+  width: 95%;
+  height: 30rem;
+
+  background-color: rgba(242, 219, 196, 0.8);
+  & p {
+    text-align: left;
+  }
+
+  &:hover {
+    transform: scale(1.1) translateY(-2rem);
+  }
+
+  &__skill-icon {
+    font-size: 6rem;
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to left, #de6262, #a38471);
+    -webkit-background-clip: text;
+  }
+}
